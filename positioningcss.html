@@ -18,7 +18,7 @@
             font-size: 1rem;
             padding:10px;
             width:80vw;
-            height:40vh;
+            height:20vh;
             /* text-align:center; */
             text-align:right;
             /* padding-right:20%; */
@@ -27,27 +27,50 @@
             /* padding-bottom:20%; */
         }
         div{
-            background-color: crimson;
+            background-color:rgb(99, 32, 32);
             margin:20px;
             height:100px;
         }
-        .two{
+        /* .two{
+            background-color: darkmagenta;
             margin-top:100px;
             margin-left:100px;
+        } */
+        .two{
+            background-color: darkmagenta;
+            /* position:static; */
+            position:relative;
+            top:40px;
+            left:10%;
+        }
+        /* h2{
+            position:relative;
+            background-color: indianred;
+            left:40px;
+            left:40%;
+        } */
+        h2{
+            background-color: indianred;
+            position:absolute;
+            right:50%;
+            bottom: -10px;;
         }
 
     </style>
 </head>
 <body>
     <div class='parent'>
-        <h2>Hello</h2>
+        <h1>Hello</h1>
     </div>  
 
     <div class='one'>
        <h2>Heading of 1 div</h2>
     </div>
+
     <div class='two'>
         <h2>Heading of 2 div</h2>
     </div>
+    
+
 </body>
 </html>
