@@ -14,27 +14,28 @@
         .bg{
             color:#fff;
         }
+        /* combine selector */
         h1.bg{
             background-color: #ffbf00;
-            /* color:#fff; */
         }
         h2.bg{
             background-color: #111;
-            /* color:#fff; */
         }
         h2.bg#unique{
-            background-color:indianred;
-            /* color:#fff; */
+            background-color: indianred;
         }
-        
-
         h3.bg{
-            background-color: orchid;
-            /* color:#fff; */
+            background-color: lightcoral;
         }
         span.bg{
             background-color: palegreen;
-            /* color:pink; */
+        }
+        /*child selector*/
+        div.parent div{         
+            background-color: lightsalmon;
+        }
+        div.parent2 div:nth-child(2){
+              background-color: lightseagreen;
         }
     </style>
 </head>
@@ -45,5 +46,17 @@
     <h3 class="bg">Heading 3 </h3>
     <h2> Heading 1 </h2>
     <span class='bg'>hello</span>
+    <hr><br>
+    <div class='parent'>
+       <div> hye </div> 
+       <h2> hello </h2>
+       <h3> Bye </h3>
+       <div> i'm div </div>
+    </div>
+    <div class='parent2'>
+        <div> hye </div> 
+        <div> i'm div </div>
+        <div> Bye </div>
+    </div>
 </body>
 </html>
