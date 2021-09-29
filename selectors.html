@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Course</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .bg{
+            color:#fff;
+        }
+        /* combine selector */
+        h1.bg{
+            background-color: #ffbf00;
+        }
+        h2.bg{
+            background-color: #111;
+        }
+        h2.bg#unique{
+            background-color: indianred;
+        }
+        h3.bg{
+            background-color: lightcoral;
+        }
+        span.bg{
+            background-color: palegreen;
+        }
+        /*child selector*/
+        div.parent div{         
+            background-color: lightsalmon;
+        }
+        div.parent2 div:nth-child(2){
+            background-color: lightseagreen;
+        }
+        /* pseudo selector */
+        div.pseudoselector1{
+            background-color: maroon;
+            color:mistyrose;
+        }
+        div.pseudoselector1:hover{
+            background-color:palevioletred;
+            cursor:grab;
+        }
+        .pseudoselector2::selection{
+            background:salmon;
+        }
+        /* focus pseudo selector */
+        input:focus{
+            background-color:thistle;
+        }
+        /* before after pseudo selector */
+        #ab::after{
+           content:"ByeByeBye";
+           font-size:1rem;
+           color:aqua; 
+           /* position:relativ e; */
+        }
+        #ab::before{
+           content:"ByeByeBye";
+           font-size:1rem;
+           color:hotpink; 
+           position:relative;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="bg">Heading 1 </h1>
+    <h2 class="bg">Heading 2 </h2>
+    <h2 class="bg" id ='unique'> second Heading 2 </h2>
+    <h3 class="bg">Heading 3 </h3>
+    <h2> Heading 1 </h2>
+    <span class='bg'>hello</span>
+    <hr><br>
+    <div class='parent'>
+       <div> hye </div> 
+       <h2> hello </h2>
+       <h3> Bye </h3>
+       <div> i'm div </div>
+    </div>
+    <hr><br>
+    <div class='parent2'>
+        <div> hye </div> 
+        <div> i'm div </div>
+        <div> Bye </div>
+    </div>
+    <hr><br>
+    <div class='pseudoselector1'>
+        <h2>I'm heading</h2>
+    </div>
+    <hr><br>
+    <div class="pseudoselector2">
+        <h3>heading 3 inside div</h3>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, sapiente doloremque? Fugit, enim voluptatum optio, deserunt 
+        nesciunt sunt officiis, dicta id numquam magnam quod explicabo vitae delectus corporis dolores quas mollitia possimus accusamus ratione 
+        sit temporibus eum aspernatur laborum. Enim! 
+    </div>
+    <label>Name</label>
+    <input type = text  placeholder='Enter name'/>
+    <hr><br>
+    <h2 class = 'bg' id='ab'>Heading 2</h2>
+        
+    
+    
+</body>
+</html>
