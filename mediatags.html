@@ -35,13 +35,30 @@
             background: #ffbf00;
             flex-basis:20%;
         }
-        @media(max-width: 450px){
+        @media(min-width: 550px){
             div.sidebar{
-                flex-basis: 0%;
+                animation:2s expand linear infinite;
             }
             div.child{
                 flex-basis: 100%
             }
+        }
+        @media(max-width: 500px){
+            div.sidebar{
+                flex-basis: 0%;
+                /* animation:2s expand linear infinite; */
+            }
+            div.child{
+                flex-basis: 100%
+            }
+        }
+        @keyframes expand {
+            0%{
+                flex-basis: 0%
+            }
+            100%{
+                flex-basis: 20%
+            } 
         }
         
     </style>
