@@ -10,7 +10,7 @@
             background-color: black;
             color: #fff;
         }
-        @media(max-width: 700px){
+        @media(max-width: 700px){        /* we should arrange the media tags in aj specific order. likke first write for 700px then for 500px.*/
             div.parent{
             background-color:coral;
             }
@@ -21,6 +21,28 @@
             font-size: 0.8rem;
             }
         }
+        div.parent1{
+            background: black;
+            display: flex;
+            align-items:stretch;
+            height: 100vh;
+        }
+        div.child{
+            background: crimson;
+            flex-basis:80%;
+        }
+        div.sidebar{
+            background: #ffbf00;
+            flex-basis:20%;
+        }
+        @media(max-width: 450px){
+            div.sidebar{
+                flex-basis: 0%;
+            }
+            div.child{
+                flex-basis: 100%
+            }
+        }
         
     </style>
 </head>
@@ -29,6 +51,11 @@
         <h2>I'm heading</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
         neque unde ullam minus est quis odio accusamus ipsam ratione deleniti</p>
+    </div>
+
+    <div class = "parent1">
+        <div class = "sidebar"></div>
+        <div class = "child"></div>
     </div>
 </body>
 </html>
