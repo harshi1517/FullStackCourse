@@ -43,7 +43,7 @@ console.log(n)
 
 
 //non-primitive datatypes
-var arr1 = [1, 2, 3, 4]   //
+var arr1 = [1, 2, 3, 4]   //doubt- while using push, it is showing 5 elements in array
 console.log(arr1)
 console.log(typeof arr1)
 console.log(arr1.length)
@@ -70,3 +70,27 @@ console.log('b+=10 ', b+=10)
 console.log('b++ ', b++)
 console.log('b-- ', b--)
 console.log('b+=5 ', b+=5)
+console.log('b-=3 ', b-=3)
+
+//comparision operator --> always return a boolean 
+var d =  10
+var e = 5
+var f = '10'
+console.log('d>e', d>e)
+console.log(d>=e)
+console.log('d<e', d<e)
+console.log(d<=e)
+console.log(d == e)
+
+console.warn(d == f)
+console.warn(d === f)
+console.warn(d + f)
+
+//logical operator
+console.log('true && true', true&&true)
+console.log('true && false', true&&false)
+console.log('false && false', false&&false)
+
+console.log('true || true', true||true)
+console.log('true || false', true||false)
+console.log('false || false', false||false)
