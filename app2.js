@@ -1,8 +1,8 @@
 //Dom method - addEvent Listner
-// var button = document.querySelector('button')
-// var input = document.querySelector('text')
-// var list = document.querySelector('list')
-// console.log (button, input, list)
+var button = document.querySelector('button')
+var input = document.querySelector('input')
+var list = document.querySelector('ul')
+console.log (button, input, list)
 
 // const callbackfun = () => {
 //     console.log('harshi')     //on clicking on add button, harshi will be seen at console
@@ -11,7 +11,7 @@
 
 
 // const callbackfun = (event) => {
-//     console.log(event)      
+//     console.log(event)        // it will give pointerevent (all informationabout the event click)
 // }
 // button.addEventListener('click', callbackfun)
 
@@ -36,8 +36,9 @@
 var body = document.querySelector('body')
 var button = document.querySelector('button')
 
-const callbackfun = () => {
-    body.classList.add('dark')
+const callbackfun = (event) => {
+    body.classList.toggle('dark')
+    // body.classList.add('dark')
     // body.classList.remove('dark')
 }
 button.addEventListener('click', callbackfun)
