@@ -1,4 +1,4 @@
-//functions
+//FUNCTIONS
 function greet(Name, age){
     console.log("HELLO!")
     console.log(Name, age)
@@ -35,7 +35,8 @@ function add(a, b){
 var result = add(5, 7)
 console.log("a+b=", result)
 
-    //above are function keyword declaration(normal declaration) and in below one we change it to a function expression
+//above are function keyword declaration(normal declaration) and
+// in below one we change it to a function expression
 var add = function(a=0, b=0){
     return a+b
 }
@@ -45,10 +46,29 @@ console.log("a+b=", add(50, 20))  //if this console.log will be placed above thi
 var add = (a=0, b=0) => {
     return a+b
 }
+//or
+//var add = (a, b) => a+b
 console.log("a+b=", add(50, 20))
 
- var greet = (Name, age) => {
+var greet = (Name, age) => {
     console.log("HELLO!")
     console.log(Name, age)
 }
 greet("Harshita", 20)
+//or
+var greet = Name => 'hi '+ Name
+console.log(greet("Harshita"))
+
+//CALL BACK FUNCTION
+var arr = ['study', 'workout', 'project']
+// for(var i = 0; i < arr.length; i++)
+// {
+//     console.log(arr[i])
+// }
+var callbackFunction = () => {
+    console.log('assignment')}
+arr.forEach(callbackFunction)
+
+var callbackFunction = (element, mystry) => {
+    console.log(element, mystry)}
+arr.forEach(callbackFunction)
