@@ -69,6 +69,15 @@ var callbackFunction = () => {
     console.log('assignment')}
 arr.forEach(callbackFunction)
 
-var callbackFunction = (element, mystry) => {
-    console.log(element, mystry)}
+var callbackFunction = (element) => {
+    console.log(element)}
 arr.forEach(callbackFunction)
+
+var callbackFunction = (element, index) => {
+    console.log(element, index)}
+arr.forEach(callbackFunction)
+//or
+arr.forEach((element, index) => {
+    console.log(element, index)
+})
+
