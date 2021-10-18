@@ -12,7 +12,7 @@ var new_arr = arr.slice(2, 4)     //arr.slice will not change the original array
 console.log(new_arr)             //it will returt a new array starting with index 2(included) till index 4(excluded)
 
 arr.splice(5, 1)             //it will remove the element at index 3, and the 2nd parameter is num of element to remove     
-console.log(arr)
+console.log(arr)             // it doesn't make a new array 
 
 
 //store even num in arr2
@@ -32,10 +32,3 @@ var arr3 = arr.filter((element) => {
     if(element % 2 == 0) return true
 })
 console.log(arr3)           //will return new array with even nums
-
-
-
-
-
-
-

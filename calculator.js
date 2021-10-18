@@ -1,3 +1,4 @@
+// simple calculator
 
 // const input1 = document.getElementsByTagName('input')[0]
 // const input2 = document.getElementsByTagName('input')[1]
