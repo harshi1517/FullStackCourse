@@ -1,4 +1,4 @@
-//scopes 
+//SCOPES 
 let a = 40
 var b = 30
 
@@ -88,13 +88,22 @@ let car3 = {
 }
 car3.print1()
 car3.print2()
-console.log(car3.hasOwnProperty('name'))
+console.log(car3.hasOwnProperty('name'))    //it will check weather name is a property of object car or not
 
 //object methods
-console.log(Object.keys(car3))
-console.log(Object.values(car3))
+console.log(Object.keys(car3))   //here Object is a global object
+console.log(Object.values(car3))  //keys and values are methods of Object
 console.log(Object)
 
+
+setTimeout(() => {
+    console.log('setTimeOut Hye')       //executes after 2000 milliseconds
+}, 2000)
+console.log('Hii')        //executes first
+
+//PROMISES
+var data = fetch('https://jsonplaceholder.typicode.com')
+console.log(data)
 
 
 
