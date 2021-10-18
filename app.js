@@ -58,17 +58,42 @@ let bus = {
 bus.print1()
 bus.print2('ferrari')
 
+let manufacturer = 'xyz'
 let car2 = {
     name:'A class',
     manufacturer: 'lamborgini',
     print:function(){
-        // let manufacturer = 'BMW'
+        let manufacturer = 'BMW'
         console.log(this)
-        console.log(manufacturer)
-        }
+        console.log(manufacturer)      //will not points to the property pf car2
+        console.log(car2.manufacturer)   //will points to the property pf car2
+        console.log(this.manufacturer)   //we can also use this
+        console.log(this.name + ' was created by' + this.manufacturer)
+    }
 }
 car2.print()
 
+//Templates(`${ } ...`) and diff in arrow fun and fun declaration
+let car3 = {
+    name:'B class',
+    manufacturer: 'TATA',
+    print1: function() {
+        console.log(this)
+        console.log(`${this.name} was created by ${this.manufacturer}`)
+    },
+    print2: () => {
+        console.log(this)
+        console.log(`${this.name} was created by ${this.manufacturer}`)
+    }
+}
+car3.print1()
+car3.print2()
+console.log(car3.hasOwnProperty('name'))
+
+//object methods
+console.log(Object.keys(car3))
+console.log(Object.values(car3))
+console.log(Object)
 
 
 
