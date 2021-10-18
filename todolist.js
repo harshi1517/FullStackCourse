@@ -26,10 +26,17 @@ console.log(button, input, list)
 //     })
 // }
 
-//to avoid  duplicates 
-
+//to avoid  duplicates and adding a function called deleteitems / saving the index of element clicked for deleting / delete the element
 var chores = []
+var deleteitems = (e, value) => {
+    // console.log(value)
+    const index = chores.indexOf(value)      //it will get the index of clicked element
+    console.log(index) 
+    chores.splice(index, 1)   
+    // console.log(chores)  
+    e.target.remove()
 
+}
 const callbackfun = (event) => {
     const inputValue = input.value              //.value takes the input
     if(chores.includes(inputValue)){
@@ -41,8 +48,8 @@ const callbackfun = (event) => {
        const textNode = document.createTextNode(inputValue)
        element.appendChild(textNode)
        list.appendChild(element)
-    //    element.addEventListener('click', (e) => {
-    //     console.log(e.target.innerHTML)  })       //on clicking on the list element, it will show that element in console 
+       element.addEventListener('click', (e) => {
+       deleteitems(e, e.target.innerHTML)  })         //calling deleteitems function
     } 
 }
 button.addEventListener('click', callbackfun)
