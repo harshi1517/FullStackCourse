@@ -15,6 +15,7 @@ arr.forEach((chore => {
     list.appendChild(element)
 }))
 
+//window prompt
 arr.forEach((chore => {
     const element = document.createElement('li')
     const textNode = document.createTextNode(chore)
@@ -22,10 +23,70 @@ arr.forEach((chore => {
     element.addEventListener('click', (e) => {
         const userInput = window.prompt(`Are you sure you want to delete ${chore} ?`)
         if(userInput == 'YES' || userInput == 'yes' || userInput == 'Yes')
-        e.target.remove()
+        {
+            const index = arr.indexOf(chore)
+            arr.splice(index, 1) 
+            e.target.remove()
+        }
     })
     list.appendChild(element)
 }))
+
+//PROMISE
+let value = new Promise ((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Hello World')
+    }, 3000)
+})
+console.log(value)
+
+//promise with .then
+let val = new Promise ((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Hello World')
+    }, 3000)  
+})
+val.then(val => {console.log(val)})
+
+//fetch and geting the data on console
+let responce = fetch('https://jsonplaceholder.typicode.com/users')
+   .then(res => res.json())
+   .then(data => {
+       console.log(data)         //returning in form of array
+       data.forEach(user => {console.log(user)})   //returning in form of object  
+    })   
+
+//fetch and geting the data on veiwport in a table
+// const table = document.querySelector('table')
+// fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(res => res.json())
+//     .then(data => {
+//         data.forEach(user => {
+//         let newRow = document.createElement('tr')
+//         let id = document.createElement('th')
+//         let idtextnode = document.createTextNode(user.id)
+//         id.appendChild(idtextnode)
+//         newRow.appendChild(id)
+//         table.appendChild(newRow)
+//         })
+//     })     //by this way we have to make the codes for name email userid also and it will become so lengthy so,
+
+const table = document.querySelector('table')
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(user => {
+        let newRow = document.createElement('tr')
+        let element = `<td>${user.id}</td>
+            <td>${user.name}</td> 
+            <td>${user.email}</td> 
+            <td>${user.username}</td>  `
+        newRow.innerHTML = element
+        table.appendChild(newRow)
+        })
+    })
+
+
 
 
 
