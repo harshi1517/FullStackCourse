@@ -115,18 +115,3 @@ const fetchData = async() => {
     console.log(data)
 }
 fetchData()
-
-
-
-const input = document.querySelector('input')
-const button = document.querySelector('button')
-const div = document.querySelector('div')
-
-const callbackfun = (event) => {
-    const inputvalue = input.value
-    const element = document.createElement('div')
-    const textnode = document.createTextNode(inputvalue)
-    element.appendChild(textnode)
-    div.appendChild(element)
-}
-button.addEventListener('click', callbackfun)
