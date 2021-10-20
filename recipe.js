@@ -30,7 +30,10 @@ const getData1 = async (food) => {
     const res = await fetch(url)
     const data = await res.json()
     // console.log(data)
-    console.log(data.hits)
+    // console.log(data.hits)
+    data.hits.forEach(recipe => {
+        console.log(recipe)
+    })
 }
 button.addEventListener('click', () => {
     getData1(input.value)
