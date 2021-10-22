@@ -28,7 +28,18 @@
         const element = document.querySelector('div');
         // element.innerHTML = 'hi'   //see diff. between innerHTML nad append
         element.append('hi');
+
+        //Destructuring
+        const person = {
+            name: 'Harshi',
+            age: 20
+        }
+        const {age, name} = person
+        console.log(`your name is ${name} and age is ${age}`)
     </script>
     
 </body>
 </html>
+
+
+
