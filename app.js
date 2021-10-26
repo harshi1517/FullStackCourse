@@ -1,15 +1,29 @@
-// console.log(module)
+//LOCAL STORAGE
+// localStorage.setItem('inputvalue', 'something')  //to set in localstorage
+// console.log(localStorage.getItem('inputvalue'))  //to get from localstorage
+// localStorage.clear()   //to clear localstorage
 
-/*REQUIRE - export the object of the file whose file name is given 
-and also execute the other codes */
+const arr = [1,2,3,4,5]
+// localStorage.setItem('val', arr)
+// console.log(localStorage.getItem('val'))   //will not get stored as array, it will get stored as string
+// console.log(typeof (localStorage.getItem('val')))  //output - string      //1,2,3,4,5 
 
-// console.log(require('./index.js'))  
-// const stuff = require('./index.js')
-// console.log(stuff)      //runs all the codes of index.js file
+const con = JSON.stringify(arr)  //JSON.stringify converts the array to string
+// console.log(con)  //output will be string that looks like an array. output -  [1,2,3,4,5] 
 
-const {addition, substraction, greeting, something} = require('./index.js')
-addition()
-substraction()    //runs all the codes of index.js and the it will execute the function
-greeting()
-console.log(something)
+localStorage.setItem('val', con)  //it will store like an array in application
+// console.log(localStorage.getItem('val'))  //on console output will be string that looks like an array.
+console.log(JSON.parse(localStorage.getItem('val')))  //JSON.parse converts the string intoarray. on console output will be an array.
 
+
+//
+// const input = document.querySelector('input')
+// const button = document.querySelector('button')
+// const div = document.querySelector('div')
+
+// div.innerHTML = localStorage.getItem('inputvalue')  // this will store the value so tha if we refresh the page, the value will not get vanished
+
+// button.addEventListener('click', (req, res) => {
+//     localStorage.setItem('inputvalue', input.value)  //this will set the value
+//     div.innerHTML = input.value
+// })
